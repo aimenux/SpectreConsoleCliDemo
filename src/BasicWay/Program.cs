@@ -89,7 +89,6 @@ public static class Program
                 services.Configure<Settings>(hostingContext.Configuration.GetSection(nameof(Settings)));
                 services.AddSingleton<ITypeResolver>(serviceProvider => new SpectreTypeResolver(serviceProvider));
                 services.AddSingleton<ITypeRegistrar>(new SpectreTypeRegistrar(services));
-                services.AddSingleton<ICommandApp, SpectreCommandApp>();
             })
             .AddSerilog();
 }
