@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Options;
 using Spectre.Console;
 using Spectre.Console.Cli;
 
@@ -11,7 +12,7 @@ namespace CustomWay.Infrastructure.Spectre
         {
             using var host = hostBuilder.Build();
             var app = host.Services.GetRequiredService<ICommandApp>();
-            var settings = host.Services.GetRequiredService<Settings>();
+            var settings = host.Services.GetRequiredService<IOptions<Settings>>().Value;
             var configurators = host.Services.GetServices<ISpectreConfigurator>();
             app.Configure(config =>
             {

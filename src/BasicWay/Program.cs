@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Spectre.Console.Cli;
 
 namespace BasicWay;
@@ -17,7 +18,7 @@ public static class Program
         try
         {
             using var host = CreateHostBuilder(args).Build();
-            var settings = host.Services.GetRequiredService<Settings>();
+            var settings = host.Services.GetRequiredService<IOptions<Settings>>().Value;
             var app = host.Services.GetRequiredService<ICommandApp>();
             app.Configure(config =>
             {
