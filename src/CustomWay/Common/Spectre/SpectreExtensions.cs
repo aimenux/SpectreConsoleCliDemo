@@ -4,7 +4,7 @@ using Microsoft.Extensions.Options;
 using Spectre.Console;
 using Spectre.Console.Cli;
 
-namespace CustomWay.Infrastructure.Spectre
+namespace CustomWay.Common.Spectre
 {
     public static class SpectreExtensions
     {

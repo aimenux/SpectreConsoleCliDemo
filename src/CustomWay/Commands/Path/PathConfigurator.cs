@@ -1,4 +1,4 @@
-﻿using CustomWay.Infrastructure.Spectre;
+﻿using CustomWay.Common.Spectre;
 using Spectre.Console.Cli;
 
 namespace CustomWay.Commands.Path

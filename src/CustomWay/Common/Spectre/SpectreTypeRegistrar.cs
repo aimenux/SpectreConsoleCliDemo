@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Spectre.Console.Cli;
 
-namespace CustomWay.Infrastructure.Spectre;
+namespace CustomWay.Common.Spectre;
 
 public sealed class SpectreTypeRegistrar : ITypeRegistrar
 {

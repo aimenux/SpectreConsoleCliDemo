@@ -1,5 +1,5 @@
-﻿using CustomWay.Infrastructure.Host;
-using CustomWay.Infrastructure.Spectre;
+﻿using CustomWay.Common.Extensions;
+using CustomWay.Common.Spectre;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;

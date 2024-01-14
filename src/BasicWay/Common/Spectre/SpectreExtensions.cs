@@ -1,6 +1,6 @@
 ﻿using Spectre.Console;
 
-namespace BasicWay.Infrastructure.Spectre
+namespace BasicWay.Common.Spectre
 {
     public static class SpectreExtensions
     {

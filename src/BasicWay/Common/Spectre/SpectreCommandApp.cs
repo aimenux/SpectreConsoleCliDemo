@@ -1,6 +1,6 @@
 ﻿using Spectre.Console.Cli;
 
-namespace BasicWay.Infrastructure.Spectre
+namespace BasicWay.Common.Spectre
 {
     public class SpectreCommandApp : ICommandApp
     {

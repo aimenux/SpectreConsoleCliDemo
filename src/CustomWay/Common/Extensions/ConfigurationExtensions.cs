@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 
-namespace CustomWay.Infrastructure.Host;
+namespace CustomWay.Common.Extensions;
 
 public static class ConfigurationExtensions
 {

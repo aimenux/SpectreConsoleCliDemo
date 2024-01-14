@@ -1,7 +1,7 @@
 ﻿using BasicWay.Commands.Math;
 using BasicWay.Commands.Path;
-using BasicWay.Infrastructure.Host;
-using BasicWay.Infrastructure.Spectre;
+using BasicWay.Common.Extensions;
+using BasicWay.Common.Spectre;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;

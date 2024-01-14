@@ -1,6 +1,6 @@
 ﻿using Spectre.Console.Cli;
 
-namespace CustomWay.Infrastructure.Spectre;
+namespace CustomWay.Common.Spectre;
 
 public interface ISpectreConfigurator
 {

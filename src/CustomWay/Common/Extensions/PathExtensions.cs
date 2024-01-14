@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace CustomWay.Infrastructure.Host;
+namespace CustomWay.Common.Extensions;
 
 public static class PathExtensions
 {
@@ -18,5 +18,5 @@ public static class PathExtensions
         }
     }
 
-    public static string GetAssemblyLocation() => Assembly.GetExecutingAssembly().Location;
+    private static string GetAssemblyLocation() => Assembly.GetExecutingAssembly().Location;
 }

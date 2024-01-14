@@ -5,7 +5,7 @@ using Microsoft.Extensions.Logging;
 using Serilog;
 using Serilog.Debugging;
 
-namespace CustomWay.Infrastructure.Host;
+namespace BasicWay.Common.Extensions;
 
 public static class LoggingExtensions
 {
