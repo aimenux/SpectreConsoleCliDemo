@@ -9,7 +9,7 @@ namespace CustomWay.Common.Extensions;
 
 public static class LoggingExtensions
 {
-    private const string DefaultCategoryName = "SpectreCliDemo";
+    private const string DefaultCategoryName = "SpectreConsoleCliDemo";
 
     public static void AddDefaultLogger(this ILoggingBuilder loggingBuilder)
     {

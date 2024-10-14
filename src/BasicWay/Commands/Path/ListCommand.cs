@@ -3,7 +3,7 @@ using Spectre.Console.Cli;
 
 namespace BasicWay.Commands.Path;
 
-public class ListCommand : AsyncCommand<PathSettings>
+public sealed class ListCommand : AsyncCommand<PathSettings>
 {
     public override Task<int> ExecuteAsync(CommandContext context, PathSettings settings)
     {

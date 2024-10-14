@@ -32,25 +32,25 @@ public static class Program
                         .AddCommand<AddCommand>("add")
                         .WithAlias("addition")
                         .WithDescription("Addition of two numbers")
-                        .WithExample(new[] { "math", "add", "8", "5" });
+                        .WithExample("math", "add", "8", "5");
 
                     math
                         .AddCommand<SubCommand>("sub")
                         .WithAlias("subtraction")
                         .WithDescription("Subtraction of two numbers")
-                        .WithExample(new[] { "math", "sub", "6", "2" });
+                        .WithExample("math", "sub", "6", "2");
                 });
                 config.AddBranch("path", path =>
                 {
                     path
                         .AddCommand<ListCommand>("list")
                         .WithDescription("List directory files")
-                        .WithExample(new[] { "path", "list", "c:/", "-e", "*" });
+                        .WithExample("path", "list", "c:/", "-e", "*");
 
                     path
                         .AddCommand<CountCommand>("count")
                         .WithDescription("Count directory files")
-                        .WithExample(new[] { "path", "count", "c:/", "-e", "*" });
+                        .WithExample("path", "count", "c:/", "-e", "*");
                 });
             });
             return await app.RunAsync(args);

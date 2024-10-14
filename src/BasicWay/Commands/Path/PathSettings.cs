@@ -4,7 +4,7 @@ using Spectre.Console.Cli;
 
 namespace BasicWay.Commands.Path;
 
-public class PathSettings : CommandSettings
+public sealed class PathSettings : CommandSettings
 {
     [CommandArgument(0, "<PATH_NAME>")]
     public string PathName { get; set; }

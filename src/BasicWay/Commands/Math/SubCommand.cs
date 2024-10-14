@@ -3,7 +3,7 @@ using Spectre.Console.Cli;
 
 namespace BasicWay.Commands.Math;
 
-public class SubCommand : AsyncCommand<MathSettings>
+public sealed class SubCommand : AsyncCommand<MathSettings>
 {
     public override Task<int> ExecuteAsync(CommandContext context, MathSettings settings)
     {

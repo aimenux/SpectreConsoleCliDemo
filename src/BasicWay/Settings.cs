@@ -1,10 +1,10 @@
 ﻿namespace BasicWay;
 
-public class Settings
+public sealed class Settings
 {
-    public string ApplicationName { get; set; } = "spectre-cli";
+    public string ApplicationName { get; init; } = "spectre-console-cli";
 
-    public string ApplicationVersion { get; set; } = "1.0";
+    public string ApplicationVersion { get; init; } = "1.0";
 
     public static class ExitCode
     {

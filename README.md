@@ -1,6 +1,6 @@
 [![.NET](https://github.com/aimenux/SpectreCliDemo/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/aimenux/SpectreCliDemo/actions/workflows/ci.yml)
 
-# SpectreCliDemo
+# SpectreConsoleCliDemo
 ```
 Exploring ways of using Spectre.Console to build CLI tools
 ```
@@ -13,10 +13,10 @@ In this repo, i m exploring various ways in order to build a simple cli tool bas
 >
 
 To run code in debug or release mode, type the following commands in your favorite terminal : 
-> - `.\BasicWay.exe math add [number1] [number2]`
-> - `.\CustomWay.exe math add [number1] [number2]`
-> - `.\BasicWay.exe path list [path] -e [extension]`
-> - `.\CustomWay.exe path list [path] -e [extension]`
+> - `dotnet run --project .\src\BasicWay\BasicWay.csproj math add [number1] [number2]`
+> - `dotnet run --project .\src\CustomWay\CustomWay.csproj math add [number1] [number2]`
+> - `dotnet run --project .\src\BasicWay\BasicWay.csproj path list [path] -e [extension]`
+> - `dotnet run --project .\src\CustomWay\CustomWay.csproj path list [path] -e [extension]`
 >
 
-**`Tools`** : vs22, net 6.0, spectre.console.cli
+**`Tools`** : net 8.0, spectre.console.cli

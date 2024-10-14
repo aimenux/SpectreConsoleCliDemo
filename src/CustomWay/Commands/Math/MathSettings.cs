@@ -3,7 +3,7 @@ using Spectre.Console.Cli;
 
 namespace CustomWay.Commands.Math;
 
-public class MathSettings : CommandSettings
+public sealed class MathSettings : CommandSettings
 {
     [CommandArgument(0, "<FIRST_NUMBER>")]
     public int FirstNumber { get; set; }
