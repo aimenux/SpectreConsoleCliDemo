@@ -41,8 +41,7 @@ public static class Program
             {
                 services.Scan(scan =>
                 {
-                    scan.FromCallingAssembly()
-                        .FromAssemblies(typeof(Program).Assembly)
+                    scan.FromAssemblies(typeof(Program).Assembly)
                         .AddClasses()
                         .AsImplementedInterfaces()
                         .WithScopedLifetime();

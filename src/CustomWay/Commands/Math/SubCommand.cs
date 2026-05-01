@@ -3,9 +3,9 @@ using Spectre.Console.Cli;
 
 namespace CustomWay.Commands.Math;
 
-public sealed class SubCommand : AsyncCommand<MathSettings>
+public sealed class SubCommand : Command<MathSettings>
 {
-    public override Task<int> ExecuteAsync(CommandContext context, MathSettings settings)
+    protected override int Execute(CommandContext context, MathSettings settings, CancellationToken cancellationToken)
     {
         checked
         {
@@ -15,6 +15,6 @@ public sealed class SubCommand : AsyncCommand<MathSettings>
             AnsiConsole.Write(new Markup($"[bold]Subtraction is[/] [green]{sub}[/]"));
         }
 
-        return Task.FromResult(Settings.ExitCode.Ok);
+        return Settings.ExitCode.Ok;
     }
 }

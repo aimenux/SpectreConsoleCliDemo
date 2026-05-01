@@ -2,7 +2,7 @@
 
 namespace CustomWay.Common.Spectre;
 
-public sealed class SpectreTypeResolver : ITypeResolver, IDisposable
+public sealed class SpectreTypeResolver : ITypeResolver
 {
     private readonly IServiceProvider _serviceProvider;
 
@@ -11,21 +11,5 @@ public sealed class SpectreTypeResolver : ITypeResolver, IDisposable
         _serviceProvider = serviceProvider ?? throw new ArgumentNullException(nameof(serviceProvider));
     }
 
-    public void Dispose()
-    {
-        if (_serviceProvider is IDisposable disposable)
-        {
-            disposable.Dispose();
-        }
-    }
-
-    public object Resolve(Type type)
-    {
-        if (type == null)
-        {
-            return null;
-        }
-
-        return _serviceProvider.GetService(type) ?? Activator.CreateInstance(type);
-    }
+    public object? Resolve(Type? type) => type == null ? null : _serviceProvider.GetService(type);
 }

@@ -22,10 +22,10 @@ public static class Program
             var app = host.Services.GetRequiredService<ICommandApp>();
             app.Configure(config =>
             {
-                config.ValidateExamples();
-                config.PropagateExceptions();
                 config.SetApplicationName(settings.ApplicationName);
                 config.SetApplicationVersion(settings.ApplicationVersion);
+                config.PropagateExceptions();
+                config.ValidateExamples();
                 config.AddBranch("math", math =>
                 {
                     math
@@ -80,8 +80,7 @@ public static class Program
             {
                 services.Scan(scan =>
                 {
-                    scan.FromCallingAssembly()
-                        .FromAssemblies(typeof(Program).Assembly)
+                    scan.FromAssemblies(typeof(Program).Assembly)
                         .AddClasses()
                         .AsImplementedInterfaces()
                         .WithScopedLifetime();

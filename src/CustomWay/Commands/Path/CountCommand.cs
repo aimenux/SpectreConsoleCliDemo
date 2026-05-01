@@ -3,9 +3,9 @@ using Spectre.Console.Cli;
 
 namespace CustomWay.Commands.Path;
 
-public sealed class CountCommand : AsyncCommand<PathSettings>
+public sealed class CountCommand : Command<PathSettings>
 {
-    public override Task<int> ExecuteAsync(CommandContext context, PathSettings settings)
+    protected override int Execute(CommandContext context, PathSettings settings, CancellationToken cancellationToken)
     {
         var files = string.IsNullOrWhiteSpace(settings.FileExtension)
             ? Directory.GetFiles(settings.PathName)
@@ -13,6 +13,6 @@ public sealed class CountCommand : AsyncCommand<PathSettings>
 
         AnsiConsole.Write(new Markup($"Found [bold][green]{files.Length}[/][/] file(s)"));
 
-        return Task.FromResult(Settings.ExitCode.Ok);
+        return Settings.ExitCode.Ok;
     }
 }

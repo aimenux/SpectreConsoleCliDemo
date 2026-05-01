@@ -44,6 +44,6 @@ public static class LoggingExtensions
 
     private static string GetOutputTemplate(IConfiguration configuration)
     {
-        return configuration["Serilog:WriteTo:0:Args:outputTemplate"];
+        return configuration["Serilog:WriteTo:0:Args:outputTemplate"]!;
     }
 }

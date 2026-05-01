@@ -10,7 +10,7 @@ public static class PathExtensions
     {
         try
         {
-            return Path.GetDirectoryName(GetAssemblyLocation());
+            return Path.GetDirectoryName(GetAssemblyLocation())!;
         }
         catch
         {

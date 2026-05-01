@@ -3,13 +3,15 @@ using Spectre.Console.Cli;
 
 namespace CustomWay.Commands.Path;
 
-public sealed class ListCommand : AsyncCommand<PathSettings>
+public sealed class ListCommand : Command<PathSettings>
 {
-    public override Task<int> ExecuteAsync(CommandContext context, PathSettings settings)
+    protected override int Execute(CommandContext context, PathSettings settings, CancellationToken cancellationToken)
     {
         var files = string.IsNullOrWhiteSpace(settings.FileExtension)
             ? Directory.GetFiles(settings.PathName)
             : Directory.GetFiles(settings.PathName, settings.FileExtension);
+        
+        var count = files.Length;
 
         foreach (var file in files)
         {
@@ -18,10 +20,15 @@ public sealed class ListCommand : AsyncCommand<PathSettings>
                 .SeparatorColor(Color.Green)
                 .StemColor(Color.Blue)
                 .LeafColor(Color.Yellow);
-
+            
             AnsiConsole.Write(path);
+            
+            if (count-- > 1)
+            {
+                AnsiConsole.WriteLine();
+            }
         }
 
-        return Task.FromResult(Settings.ExitCode.Ok);
+        return Settings.ExitCode.Ok;
     }
 }

@@ -7,12 +7,12 @@ namespace CustomWay.Commands.Path;
 public sealed class PathSettings : CommandSettings
 {
     [CommandArgument(0, "<PATH_NAME>")]
-    public string PathName { get; set; }
+    public string PathName { get; set; } = null!;
 
     [CommandOption("-e|--extension")]
     [Description("Filter on file extension.")]
     [DefaultValue("*")]
-    public string FileExtension { get; set; }
+    public string FileExtension { get; set; } = null!;
 
     public override ValidationResult Validate()
     {
