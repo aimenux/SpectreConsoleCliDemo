@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/files/">
+    <File Path=".editorconfig" />
+    <File Path=".github/workflows/ci.yml" />
+    <File Path=".gitignore" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+    <File Path="global.json" />
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="src/Example01/Example01.csproj" />
+  <Project Path="src/Example02/Example02.csproj" />
+</Solution>
