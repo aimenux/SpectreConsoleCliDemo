@@ -10,4 +10,5 @@
   </Folder>
   <Project Path="src/Example01/Example01.csproj" />
   <Project Path="src/Example02/Example02.csproj" />
+  <Project Path="src/Example03/Example03.csproj" />
 </Solution>
